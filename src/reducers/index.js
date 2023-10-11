@@ -1,8 +1,19 @@
 const initialState = {
-  books: []
+  books: [
+    {
+      id: 1,
+      title: 'Production-Ready Microservices',
+      author: 'Susan J. Fowler'
+    },
+    {
+      id: 2,
+      title: 'Release It!',
+      author: 'Michael T. Nygard'
+    }
+  ]
 };
 
-const reducer = (state, actions) => {
+const reducer = (state = initialState, actions) => {
   switch (actions.type) {
     case 'BOOKS_LOADED':
       return {

@@ -18,13 +18,20 @@ const booksError = (error) => {
   };
 };
 
-const booksAddedToCart = (bookId) => {
+const booksAddedToCart = (bookId, isAdded) => {
   return {
     type: 'BOOKS_ADDED_TO_CART',
     payload: bookId,
+    isAdded: isAdded
   };
 };
 
+const booksDeletedFromCart = (bookId) => {
+  return {
+    type: 'BOOKS_DELETED_FROM_CART',
+    payload: bookId,
+  };
+};
 
 const fetchBooks = (bookstoreService, dispatch) => () => {
   dispatch(booksRequest());
@@ -35,5 +42,6 @@ const fetchBooks = (bookstoreService, dispatch) => () => {
 
 export {
   fetchBooks,
-  booksAddedToCart
+  booksAddedToCart,
+  booksDeletedFromCart
 };

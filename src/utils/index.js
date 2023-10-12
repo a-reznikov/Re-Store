@@ -1,3 +1,5 @@
-import compose from "./compose,js";
+import compose from './compose';
 
-export { compose };
+export {
+  compose
+};

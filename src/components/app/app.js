@@ -1,21 +1,20 @@
 import React from "react";
-import { Link } from 'react-router-dom'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom';
 
-import './app.css'
-import { HomePage, CartPage } from '../pages'
+import './app.css';
+import ShopHeader from '../shop-header';
+import { HomePage, CartPage } from '../pages';
 
 const App = () => {
 
   return (
-    <div className="app">App
-      <Link to='/'>Home</Link>
-      <Link to='/cart/'>Cart</Link>
+    <main role="main" className="container">
+      <ShopHeader numItems={5} total={210} />
       <Routes>
         <Route path='/' element={<HomePage />} />
         <Route path='/cart/' element={<CartPage />} />
       </Routes>
-    </div>
+    </main>
   )
 }
 

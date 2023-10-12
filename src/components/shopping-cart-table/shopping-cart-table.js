@@ -12,7 +12,7 @@ const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) =
         <td>{index + 1}</td>
         <td>{name}</td>
         <td>{count}</td>
-        <td>{total}</td>
+        <td>${total}</td>
         <td>
           <button
             onClick={() => onIncrease(id)}

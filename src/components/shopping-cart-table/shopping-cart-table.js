@@ -6,6 +6,8 @@ import './shopping-cart-table.css';
 
 const ShoppingCartTable = ({ items, total, onIncrease, onDecrease, onDelete }) => {
 
+  console.log(total);
+
   const renderRow = (item, index) => {
     const { id, title, count, total } = item;
     return (
